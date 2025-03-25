@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heim | HVS Verkfræðistofa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- Forsíðuborði -->
+<div class="page-banner">
+    <div class="container">
+        <div class="banner-content">
+            <div class="banner-nav-container">
+                <div class="banner-nav">
+                    <a href="index_is.html" class="banner-link active">Heim</a>
+                    <a href="about_is.html" class="banner-link">Um okkur</a>
+                    <a href="services_is.html" class="banner-link">Þjónusta</a>
+                    <a href="projects_is.html" class="banner-link">Verkefni</a>
+                    <a href="contact_is.html" class="banner-link">Hafa samband</a>
+
+                    <!-- Language Dropdown -->
+                    <div class="language-dropdown">
+                        <button class="banner-link language-toggle">Tungumál ▼</button>
+                        <div class="language-menu">
+                            <a href="#" id="lang-icelandic" class="language-option">
+                                <img src="assets/images/iceland_flag.png" alt="Íslenska" class="flag-icon"> Íslenska
+                            </a>
+                            <a href="#" id="lang-english" class="language-option">
+                                <img src="assets/images/uk_flag.png" alt="English" class="flag-icon"> English
+                            </a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Texti fyrir neðan borða -->
+<section class="container page-content">
+    <div class="row align-items-center">
+        <div class="col-md-8 text-left">
+            <h2 class="section-heading">Okkar Sérsvið</h2>
+            <p class="section-subtext">
+                Við sérhæfum okkur í stjórn-og varnarbúnaði, prófunum á háspennubúnaði og ástandsgreiningu. 
+                Við tryggjum skilvirkni, öryggi og áreiðanleika í raforkukerfum um allan heim.
+            </p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="assets/images/logo.png" alt="HVS Verkfræðistofa Logo" class="expertise-logo">
+        </div>
+    </div>
+</section>
+
+<!-- 🔹 Fix Button Alignment & Styling -->
+<style>
+    /* Ensure the logo size matches index.html */
+    .expertise-logo {
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Ensure all service cards have equal height */
+    .page-services .page-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Left-align text */
+        text-align: left;
+        justify-content: space-between;
+        min-height: 200px;
+        padding: 20px;
+    }
+
+    /* Left-align "Lesa meira" buttons */
+    .page-card .read-more-btn {
+        margin-top: auto;
+        align-self: flex-start; /* Align button to the left */
+    }
+</style>
+
+<!-- Valin þjónusta -->
+<section class="container page-services">
+    <div class="row">
+        <div class="col-md-4 page-card">
+            <div class="icon"><i class="fas fa-shield"></i></div>
+            <h3>Stjórn- og varnarbúnaður</h3>
+            <p>Við tryggjum að stjórn-og varnarbúnaður virki með reglulegum prófunum.</p>
+            <button class="btn btn-primary read-more-btn" data-bs-toggle="modal" data-bs-target="#controlProtectionModal">Lesa meira</button>
+        </div>
+
+        <div class="col-md-4 page-card">
+            <div class="icon"><i class="fas fa-bolt"></i></div>
+            <h3>Háspennuprófanir</h3>
+            <p>Ítarleg greining á rafbúnaði og spennustöðvum.</p>
+            <button class="btn btn-primary read-more-btn" data-bs-toggle="modal" data-bs-target="#highVoltageTestingModal">Lesa meira</button>
+        </div>
+
+        <div class="col-md-4 page-card">
+            <div class="icon"><i class="fas fa-tools"></i></div>
+            <h3>Ástandsgreining</h3>
+            <p>Tryggjum áreiðanleika búnaðar með sérfræðiþjónustu.</p>
+            <button class="btn btn-primary read-more-btn" data-bs-toggle="modal" data-bs-target="#conditionAssessmentModal">Lesa meira</button>
+        </div>
+    </div>
+</section>
+
+<!-- 🔹 Add Missing Modals -->
+<!-- Stjórn- og varnarbúnaður Modal -->
+<div class="modal fade" id="controlProtectionModal" tabindex="-1" aria-labelledby="controlProtectionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="controlProtectionLabel"><strong>Stjórn- og varnarbúnaður</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Loka"></button>
+            </div>
+            <div class="modal-body">
+                <p>Við tryggjum að stjórn- og varnarbúnaður virki með reglulegum prófunum til að forðast rafmagnsbilun og tryggja áreiðanleika kerfa.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Háspennuprófanir Modal -->
+<div class="modal fade" id="highVoltageTestingModal" tabindex="-1" aria-labelledby="highVoltageTestingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="highVoltageTestingLabel"><strong>Háspennuprófanir</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Loka"></button>
+            </div>
+            <div class="modal-body">
+                <p>Við framkvæmum ítarlega greiningu á rafbúnaði og spennustöðvum til að tryggja öryggi og skilvirkni.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ástandsgreining Modal -->
+<div class="modal fade" id="conditionAssessmentModal" tabindex="-1" aria-labelledby="conditionAssessmentLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="conditionAssessmentLabel"><strong>Ástandsgreining</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Loka"></button>
+            </div>
+            <div class="modal-body">
+                <p>Tryggjum áreiðanleika búnaðar með sérfræðiþjónustu og ítarlegum prófunum.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fótur -->
+<footer>
+    <p>&copy; 2025 HVS Verkfræðistofa. Öll réttindi áskilin.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

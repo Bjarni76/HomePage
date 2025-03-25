@@ -1,0 +1,806 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* Banner Section (About & Index) */
+.page-banner {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 40px;
+    background: linear-gradient(to left, rgba(0, 0, 50, 0.8), rgba(0, 100, 200, 0.6));
+}
+
+/* Banner Content */
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical centering */
+    width: 100%;
+    height: 100%; /* Ensures full height alignment */
+}
+
+/* Banner Text */
+.banner-text {
+    flex: 1;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+}
+
+/* Logo Container */
+.banner-logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center; /* Centers the logo vertically */
+    justify-content: flex-end;
+    height: 100%; /* Ensures it takes full height */
+}
+
+.banner-logo {
+    height: 60px;
+    max-height: 100px;
+    display: block;
+}
+
+/* Navigation Links inside Banner */
+.banner-nav {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.banner-link {
+    display: inline-block;
+    background: rgba(48, 40, 40, 0.2);
+    color: rgb(16, 13, 13);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.banner-link:hover {
+    background: #007bff;
+    transform: translateY(-3px);
+}
+
+.banner-link.active {
+    background: #0056b3;
+}
+
+/* About Page Content */
+.about-content {
+    padding: 20px 0;
+}
+
+/* About Cards */
+.about-card {
+    text-align: left;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to right, rgba(88, 88, 143, 0.8), rgba(0, 100, 200, 0.6));
+    color: white;
+}
+
+.about-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.about-card:hover p {
+    color: white;
+}
+
+/* About Icons */
+.about-card .icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.about-card:hover .icon {
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to left, rgba(0, 0, 50, 0.8), rgba(0, 100, 200, 0.6));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-logo-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-card {
+        text-align: center;
+    }
+}
+/* Logo Styling */
+.banner-logo {
+    height: 60px; /* Adjust height if needed */
+    max-height: 100px;
+    display: block;
+    object-fit: contain; /* Ensures it doesn't distort */
+}
+/* Services Page - Banner */
+.services-banner {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 40px;
+    background: linear-gradient(to left, rgba(0, 0, 50, 0.8), rgba(0, 100, 200, 0.6));
+}
+
+/* Banner Content */
+.services-banner .banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical centering */
+    width: 100%;
+    height: 100%; /* Ensures full height alignment */
+}
+
+/* Banner Text */
+.services-banner .banner-text {
+    flex: 1;
+    text-align: left;
+}
+
+.services-banner .banner-text h1 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
+
+.services-banner .banner-text p {
+    font-size: 1.2rem;
+}
+
+/* Logo Container */
+.services-banner .banner-logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center; /* Centers the logo vertically */
+    justify-content: flex-end;
+    height: 100%; /* Matches the height of the banner */
+}
+
+.services-banner .banner-logo {
+    height: 60px; /* Adjust height as needed */
+    max-height: 100%; /* Ensures the logo stays within the container's height */
+    object-fit: contain; /* Prevents distortion */
+}
+
+/* Services Page Content */
+.services-content {
+    padding: 50px 0;
+}
+
+/* Services Cards */
+.service-card {
+    text-align: left;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to right, rgba(88, 88, 143, 0.8), rgba(0, 100, 200, 0.6));
+    color: white;
+}
+
+.service-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.service-card:hover p {
+    color: white;
+}
+
+/* Service Icons */
+.service-card .icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-card:hover .icon {
+    color: white;
+}
+/* Project Cards */
+.project-card {
+    text-align: left;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to right, rgba(88, 88, 143, 0.8), rgba(0, 100, 200, 0.6));
+    color: white;
+}
+
+/* Project Card Headings */
+.project-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Project Card Text */
+.project-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.project-card:hover p {
+    color: white;
+}
+
+/* Project Images */
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+* Home Page Banner (Uses Background Image) */
+.index-banner {
+    position: relative;
+    background: url("../images/headerImage.png") no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    padding: 0 20px;
+}
+
+/* Dark Overlay to Enhance Readability */
+.index-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 50, 0.5);
+}
+
+/* Ensures Text and Logo Appear on Top of Overlay */
+.index-banner .container {
+    position: relative;
+    z-index: 0;
+}
+
+/* Home Page Content */
+.home-content {
+    padding: 50px 0;
+    text-align: left;
+}
+
+/* Page Banner General Styling (Same as Other Pages) */
+.page-banner {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 40px;
+}
+
+/* Banner Content */
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Banner Text */
+.banner-text {
+    flex: 1;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+}
+
+/* Logo Container */
+.banner-logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+/* Logo Styling */
+.banner-logo {
+    height: 60px;
+    max-height: 100px;
+    display: block;
+}
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-logo-container {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* Home Page Banner (Uses Background Image) */
+.index-banner {
+    position: relative;
+    background: url("../images/headerImage.png") no-repeat center center/cover;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    padding: 0 40px;
+}
+
+/* Dark Overlay for Better Text Visibility */
+.index-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 50, 0.5);
+    z-index: 1;
+}
+
+/* Banner Content Positioned Above Overlay */
+.index-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Banner Content */
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Banner Text */
+.banner-text {
+    flex: 1;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.banner-text p {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* Navigation Links inside Banner */
+.banner-nav {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.banner-link {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.384);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.banner-link:hover {
+    background: #007bff;
+    transform: translateY(-3px);
+}
+
+.banner-link.active {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, rgba(0, 0, 50, 0.8), rgba(0, 100, 200, 0.6));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+/* About Page Banner with Background Image */
+.about-banner {
+    position: relative;
+    background: url("../images/headerImage.png") no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0 40px;
+}
+
+
+/* Dark Overlay for Better Text Visibility */
+.about-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 50, 0.5);
+    z-index: 1;
+}
+
+
+/* Ensures Banner Content Appears on Top of Overlay */
+.about-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Service Page - Adjust Logo Position */
+.services-banner .banner-logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%; /* Matches the height of the banner */
+    margin-right: 0px; /* Moves the logo 10px to the right */
+}
+
+.services-banner .banner-logo {
+    height: 60px; /* Adjust height as needed */
+    max-height: 100%; /* Ensures the logo stays within the container's height */
+    object-fit: contain; /* Prevents distortion */
+    transform: translateY(30px); /* Lowers the logo by 50px */
+}
+/* Projects Page - Adjust Logo Position */
+.Projects-banner .banner-logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%; /* Matches the height of the banner */
+    margin-right: 0px; /* Moves the logo 10px to the right */
+}
+
+.projects-banner .banner-logo {
+    height: 60px; /* Adjust height as needed */
+    max-height: 100%; /* Ensures the logo stays within the container's height */
+    object-fit: contain; /* Prevents distortion */
+    transform: translateY(30px); /* Lowers the logo by 50px */
+}
+/* Set initial zoom to 75% */
+body {
+    zoom: 100%; /* Adjusts the zoom level to 75% */
+}
+/* Contact Page - Banner */
+.contact-banner {
+    position: relative;
+    height: 200px; /* Matches the height of the about banner */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 40px;
+    background: linear-gradient(to left, rgba(0, 0, 50, 0.8), rgba(0, 100, 200, 0.6));
+}
+
+/* Banner Content */
+.contact-banner .banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical centering */
+    width: 100%;
+    height: 100%; /* Ensures full height alignment */
+}
+
+/* Banner Text */
+.contact-banner .banner-text {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-banner .banner-text h1 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
+
+.contact-banner .banner-text p {
+    font-size: 1rem;
+}
+
+/* Logo Container */
+.contact-banner .banner-logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center; /* Centers the logo vertically */
+    justify-content: flex-end;
+    height: 100%; /* Matches the height of the banner */
+}
+
+.contact-banner .banner-logo {
+    height: 60px; /* Adjust height as needed */
+    max-height: 100%; /* Ensures the logo stays within the container's height */
+    object-fit: contain; /* Prevents distortion */
+}
+
+/* Contact Page Content */
+.contact-content {
+    padding: 50px 0;
+}
+
+/* Contact Cards */
+.contact-card {
+    text-align: left;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to right, rgba(88, 88, 143, 0.8), rgba(0, 100, 200, 0.6));
+    color: white;
+}
+
+.contact-card h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.contact-card:hover p {
+    color: white;
+}
+
+/* Footer (Shared with About Page) */
+footer {
+    background: linear-gradient(to left, rgba(0, 0, 50, 0.8), rgba(0, 100, 200, 0.6));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Banner Section with Background Image */
+.index-banner {
+    position: relative;
+    background: url("../images/headerImage.png") no-repeat center center/cover;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 40px;
+}
+
+/* Dark Overlay to Enhance Readability */
+.index-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 50, 0.5);
+    z-index: 1;
+}
+
+/* Banner Section with Background Image */
+.index-banner {
+    position: relative;
+    background: url("../images/headerImage.png") no-repeat center center/cover;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 40px;
+}
+
+/* Dark Overlay to Enhance Readability */
+.index-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 50, 0.5);
+    z-index: 1;
+}
+
+/* Banner Content Positioned Above Overlay */
+.index-banner .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigation Links */
+.banner-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 100px; /* Adds 10px margin to lower the links */
+}
+
+.banner-link {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.banner-link:hover {
+    background: #007bff;
+    transform: translateY(-3px);
+}
+
+.banner-link.active {
+    background: #0056b3;
+}
+
+/* Logo Section */
+.banner-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Logo Background Effect */
+.logo-background {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80%;
+    background: linear-gradient(135deg, rgba(0, 100, 200, 0.8), rgba(88, 88, 143, 0.8));
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner-logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Smart Text Below Logo */
+.logo-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #e0e0e0;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, rgba(0, 0, 50, 0.8), rgba(0, 100, 200, 0.6));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
